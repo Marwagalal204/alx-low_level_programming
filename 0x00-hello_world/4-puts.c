@@ -2,7 +2,7 @@
 /**
  * main - Entery point
  * Descrption :  printing with a C lnguge  using puts function
- * Return Descrption : Always  0 (success)
+ * retur : Always  0 (success)
 */
 int main(void)
 {
