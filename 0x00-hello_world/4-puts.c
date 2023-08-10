@@ -1,12 +1,12 @@
 /**
- *puts.c
+ *file name : 4-puts.c
  * in this file i will print tex about c
 */
 #include <stdio.h>
 /**
- * printing  string using put function
- * main() is my entery point
- * return: 0 for success
+ * printing using put function
+ * main() - Entry point
+ * Return: always  0.
 */
 
 int main(void)
