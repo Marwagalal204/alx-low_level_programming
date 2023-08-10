@@ -1,13 +1,10 @@
+#include <stdio.h>
 /**
  *file name : 4-puts.c
  * in this file i will print tex about c
-*/
-
-#include <stdio.h>
-/**
  * Descrption :  printing using puts function
  * main()  Descrption : Entry point
- * Return Descrption : Always  0.
+ * Return Descrption : Always  0 when main success
 */
 
 int main(void)
