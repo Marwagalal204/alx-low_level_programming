@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - Entery point
- * Descrption :  printing with a C lnguge  using puts function
- * retur : Always  0 (success)
+ * Descrption - printing with a C lnguge  using puts function
+ * Return: Always 0 (Success)
 */
 int main(void)
 {
