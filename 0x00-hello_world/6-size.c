@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - Entery point
+ * Descrption - printing with a C lnguge  using sizeof & printf function
+ * Return: Always 0 (Success)
+*/
 int main(void)
 {
 	printf("Size of a char: %zu byte(s)\n", sizeof(char));
