@@ -1,7 +1,12 @@
-#include <stdio.h>
+#include <stdio>
+/**
+ * printing  string using put function
+ * main is my entery point
+*/
 
-int main (void)
+int main(void)
 {
-	 puts ("\"Programming is like building a multilingual puzzle \n");
-	 return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+
+	return (0);
 }
