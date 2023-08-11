@@ -10,12 +10,10 @@ int main(void)
 {
 	char c;
 
-	c = 97;
-	while (c < 123)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		printf("%c", c);
-		c = c + 1;
+		putchar(c);
 	}
-
+	putchar('\n');
 	return (0);
 }
