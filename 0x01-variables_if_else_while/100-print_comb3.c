@@ -15,7 +15,7 @@ int main(void)
 	{
 	for (i = c; i <= 9; i++)
 	{
-		if (i != 0 && c != i && i > c)
+		if (c != i && i > c)
 		putchar(c + '0');
 		putchar(i + '0');
 		putchar(',');
