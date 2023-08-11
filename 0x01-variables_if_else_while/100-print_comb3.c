@@ -1,7 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * main - Entery point
  * Descrption - using if and else statement
@@ -16,7 +15,7 @@ int main(void)
 	{
 	for (i = c; i <= 9; i++)
 	{
-		if (i != 0 && c != i)
+		if (i != 0 && c != i && i > c)
 		putchar(c + '0');
 		putchar(i + '0');
 		putchar(',');
