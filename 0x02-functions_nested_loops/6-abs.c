@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * int _abs : print absolute varible
- * @int - absolute integer
- * return : 0 for absolute number
-*/
+ * _abs - Print absolute value.
+ * @n: n is an integer,
+ * Return: absolute value of integer.
+ */
 int _abs(int r)
 {
 	if (r > 0)
