@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *print_alphabet : Entery point
- * Return: Always 0 (Success)
+ * Return: void
 */
 void print_alphabet(void)
 {
@@ -13,3 +13,4 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
+
