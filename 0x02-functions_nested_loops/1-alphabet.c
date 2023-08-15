@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - Entery point
- * print_alphabet - a function to print alphebet
+ * Description :  print_alphabet a function to print alphebet
  * Return: Always 0 (Success)
 */
 void print_alphabet(void)
