@@ -1,9 +1,8 @@
 #include "main.h"
 #include "1-alphabet.c"
 /**
- * main - Entery point
- * Description :  print_alphabet a function to print alphebet
- * Return: Always 0 (Success)
+ * print_alphabet_x10 - print alphabet 10 times
+ * Return: void
 */
 void print_alphabet_x10(void)
 {
