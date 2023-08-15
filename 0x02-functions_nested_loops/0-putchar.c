@@ -5,7 +5,7 @@
  * Descrption - print with printf function
  * Return: Always 0 (Success)
 */
-int main()
+int main(void)
 {
 	_putchar("_putchar");
 	return(0);
