@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * _abs - Print absolute value.
- * @n: n is an integer,
+ * @r: r is an integer,
  * Return: absolute value of integer.
  */
 int _abs(int r)
