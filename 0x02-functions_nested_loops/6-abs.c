@@ -2,21 +2,21 @@
 #include "main.h"
 /**
  * _abs - Print absolute value.
- * @r: r is an integer,
+ * @i: i is an integer,
  * Return: absolute value of integer.
  */
-int _abs(int r)
+int _abs(int i)
 {
-	if (r > 0)
-	{
-		return (r);
-	}
-	else if (r < 0)
-	{
-		return (-r);
-	}
+	int p = (i * -1);
+
+	if (i > 0)
+		_putchar(i);
+
+	else if (i < 0)
+		_putchar(p);
+
 	else
-	{
-		return (r);
-	}
+		_putchar (0);
+
+	return (0);
 }
