@@ -9,8 +9,8 @@ void times_table(void)
 	int i, m;
 
 	for (i = 0; i <= 9; i++)
-		m = (i * 9);
 	{
+		m = (i * 9);
 		_putchar(m + '0');
 	}
 }
