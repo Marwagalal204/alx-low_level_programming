@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_to_98 - Prints numbers from input to 98, separated by a comma,
@@ -8,17 +9,16 @@
 
 void print_to_98(int n)
 {
-if (n >= 98)
-{
-while (n > 98)
-printf("%d, ", n--);
-printf("%d\n", n);
-}
+	int i;
 
-else
-{
-while (n < 98)
-printf("%d, ", n++);
-printf("%d\n", n);
-}
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		_putchar(i + '0');
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
+		_putchar(i + '0');
+	}
 }
