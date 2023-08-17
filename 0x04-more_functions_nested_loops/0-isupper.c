@@ -1,10 +1,10 @@
 #include "main.h"
+
 /**
- *  _isupper - Entry point
- *  @c: The received character
+ * _isupper - checks for uppercase character
+ *  @c: character to be checked
  *  Return: 1 if true. 0 if false
  */
-
 int _issupper(int c)
 {
 
