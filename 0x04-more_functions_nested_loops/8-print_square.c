@@ -1,16 +1,18 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints a line of \ n long
- * @n: length of line
- * Return: void
+ * print_square - prints a line of # n long
+ *
+ * @size: length and width of square
+ *
 */
 
 void print_square(int size)
 {
 	int i;
 	int a = 0;
-	if(size <= 0)
+
+	if (size <= 0)
 	{
 		_putchar('\n');
 		return;
