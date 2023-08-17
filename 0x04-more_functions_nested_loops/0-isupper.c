@@ -5,7 +5,8 @@
  *  @c: character to be checked
  *  Return: 1 if true. 0 if false
  */
-int _issupper(int c)
+
+int _isupper(int c)
 {
 
 	char i;
