@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * mul - Entery point
  * @a:firdt int
@@ -10,6 +11,6 @@ int mul(int a, int b)
 {
 	int sum = (a * b);
 
-	_putchar(sum);
+	return (sum);
 	return (0);
 }
