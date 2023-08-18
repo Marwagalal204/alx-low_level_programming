@@ -3,7 +3,7 @@
 /**
  * print_diagonal - prints a line of \ n long
  * @n: length of line
- *Return: void
+ * Return: void
 */
 
 void print_diagonal(int n)
@@ -22,5 +22,4 @@ void print_diagonal(int n)
 		else
 			_putchar('\n');
 	}
-	_putchar('\n');
 }
