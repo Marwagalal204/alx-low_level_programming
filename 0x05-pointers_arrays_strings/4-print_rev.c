@@ -16,7 +16,7 @@ void print_rev(char *s)
 	}
 	while (a <= *s)
 	{
-		if (a != '\0')
+		if (a < *s)
 		_putchar(*s + 0);
 		s--;
 		a++;
