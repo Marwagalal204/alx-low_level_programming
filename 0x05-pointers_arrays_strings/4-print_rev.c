@@ -1,13 +1,25 @@
 #include "main.h"
-void print_rev(char *s) {
+/**
+ * print_rev - print string reversed
+ * @s: input
+ * Descrption: print string reversed
+*/
 
-	char c[100];
-	int i,a;
-	for(i = 0; *s != '\0'; i ++) {
-		c[i] = *(s + i); 
-	} 
+void print_rev(char *s)
 
-	for(a = 100; a >= 0; a++) {
-		_putchar(c[a]);
-	} 
+{
+	int count = 0, a = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		count++;
+	}
+	while (a <= count)
+	{
+		_putchar(*s + 0);
+		s--;
+		a++;
+	}
+	_putchar('\n');
 }
