@@ -2,20 +2,17 @@
 /**
  * reverse_array - function that reverse arrays
  * @a: array
- * n: the number of elements to swap
+ * @n: the number of elements to swap
 */
 
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i = 0, j;
 
-	while (a[i] != '\0' && i < n)
+	for (i = 0; i < n / 2; i++)
 	{
-		i++;
-	}
-	while (i < n)
-	{
-		a[i] = i - 1;
-		i--;
+		j = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = j;
 	}
 }
