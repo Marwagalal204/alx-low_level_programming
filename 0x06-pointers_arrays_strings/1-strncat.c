@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat - fuction conctanate two strings with n value
+ * _strncat - fuction conctanate two strings with n value
  * @dest: sting destanation
  * @src: string to be concatanating
  * @n: length of src
