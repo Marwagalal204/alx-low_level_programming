@@ -18,5 +18,6 @@ char *string_toupper(char *str)
 			*str = *str - 32;
 		str++;
 	}
+	str -= i;
 	return (str);
 }
