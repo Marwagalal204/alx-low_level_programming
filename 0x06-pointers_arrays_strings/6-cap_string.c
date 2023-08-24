@@ -3,14 +3,18 @@
  * cap_string - print string nd make first letter capital
  * @str: points to start of array
  * Descrption: print string and make first letter capital
- * return: resulting string
+ * return: return the resulting string
 */
 
 char *cap_string(char *str)
 {
 	while (*str != '\0')
 	{
-		if (*str == 32 || *str == 46 || *str == 9 || *str == '\n')
+		if (*str == ' ' || *str == '.' || *str == '\t'
+		|| *str == '\n' || *str == ',' || *str == ';'
+		|| *str == '!' || *str == '?' || *str == '"'
+		|| *str == '(' || *str == ')' || *str == '{' 
+		|| *str == '}')
 		{
 			str++;
 			if (*str >= 97 && *str <= 122)
