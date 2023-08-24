@@ -12,13 +12,13 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ' || str[i] == '.' || str[i] == '\t'
-		|| str[i] == '\n' || str[i] == ',' || str[i] == ';'
-		|| str[i] == '!' || str[i] == '?' || str[i] == '"'
-		|| str[i] == '(' || str[i] == ')' || str[i] == '{'
-		|| str[i] == '}')
+
+		if (str[i - 1] == ' ' || str[i - 1] == '.' || str[i - 1] == '\t'
+		|| str[i - 1] == '\n' || str[i- 1] == ',' || str[i - 1] == ';'
+		|| str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"'
+		|| str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{'
+		|| str[i - 1] == '}')
 		{
-			i++;
 			if (str[i] >= 97 && str[i] <= 122)
 				str[i] = str[i] - 32;
 		}
