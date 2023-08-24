@@ -8,19 +8,21 @@
 
 char *cap_string(char *str)
 {
-	while (*str != '\0')
+	int i = 0;
+
+	while (str[i] != '\0')
 	{
-		if (*str == ' ' || *str == '.' || *str == '\t'
-		|| *str == '\n' || *str == ',' || *str == ';'
-		|| *str == '!' || *str == '?' || *str == '"'
-		|| *str == '(' || *str == ')' || *str == '{'
-		|| *str == '}')
+		if (str[i] == ' ' || str[i] == '.' || str[i] == '\t'
+		|| str[i] == '\n' || str[i] == ',' || str[i] == ';'
+		|| str[i] == '!' || str[i] == '?' || str[i] == '"'
+		|| str[i] == '(' || str[i] == ')' || str[i] == '{'
+		|| str[i] == '}')
 		{
-			str++;
-			if (*str >= 97 && *str <= 122)
-				*str = *str - 32;
+			i++;
+			if (str[i] >= 97 && str[i] <= 122)
+				str[i] = str[i] - 32;
 		}
-		str++;
+		i++;
 	}
 	return (str);
 }
