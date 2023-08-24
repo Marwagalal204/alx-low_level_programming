@@ -3,7 +3,7 @@
  * cap_string - print string nd make first letter capital
  * @str: points to start of array
  * Descrption: print string and make first letter capital
- * return: return the resulting string
+ * Return: str reslt string
 */
 
 char *cap_string(char *str)
@@ -13,7 +13,7 @@ char *cap_string(char *str)
 		if (*str == ' ' || *str == '.' || *str == '\t'
 		|| *str == '\n' || *str == ',' || *str == ';'
 		|| *str == '!' || *str == '?' || *str == '"'
-		|| *str == '(' || *str == ')' || *str == '{' 
+		|| *str == '(' || *str == ')' || *str == '{'
 		|| *str == '}')
 		{
 			str++;
