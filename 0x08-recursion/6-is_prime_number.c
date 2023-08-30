@@ -12,7 +12,7 @@ int _check_prime(int i, int n)
 		return (1);
 	else if (n % i == 0)
 		return (0);
-	return _check_prime(i + 1, n);
+	return (_check_prime(i + 1, n));
 }
 
 /**
@@ -22,7 +22,8 @@ int _check_prime(int i, int n)
 */
 int is_prime_number(int n)
 {
-	if(n <= 1) return(0);
-	return _check_prime(2, n);
+	if (n <= 1)
+		return (0);
+	return (_check_prime(2, n));
 }
 
