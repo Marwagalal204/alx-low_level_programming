@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _atoi - convert a string into an integer.
+ * atoi - convert string to integer.
  * @s: string to be converted
  * Return: integer converted from the string
 */
@@ -10,7 +10,9 @@
 int atoi(char *s)
 {
 	int sign = 1;
+
 	unsigned int num = 0;
+
 	do {
 		if (*s == '-')
 			sign *= -1;
