@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *  * _strspn - find and return first matching char
- *   * @s: memory to search in
- *    * @accept: character search for
- *     * Return: Always i
- *     */
+ * _strspn - find and return first matching char
+ * @s: memory to search in
+ * @accept: character search for
+ * Return: Always i
+*/
 
 unsigned int _strspn(char *s, char *accept)
 {

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *  * _strcpy - copies a string from one pointer to another.
- *   * @src: input.
- *    * @dest: input.
- *     * Return: function copies a string .
- *     */
+ * _strcpy - copies a string from one pointer to another.
+ * @src: input.
+ * @dest: input.
+ * Return: function copies a string .
+*/
 
 char *_strcpy(char *dest, char *src)
 {

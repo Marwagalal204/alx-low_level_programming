@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *  * _abs - Print absolute value.
- *   * @i: i is an integer,
- *    * Return: absolute value of integer.
- *     */
+ * _abs - Print absolute value.
+ * @i: i is an integer,
+ * Return: absolute value of integer.
+*/
 int _abs(int i)
 {
 	int p = (i * -1);

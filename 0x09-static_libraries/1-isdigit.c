@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *  * _isdigit - Entery point
- *   *  @c:cheks the digits
- *    *   Return: 1 if true. 0 if false
- *     */
+ * _isdigit - Entery point
+ * @c:cheks the digits
+ * Return: 1 if true. 0 if false
+*/
 
 int _isdigit(int c)
 {

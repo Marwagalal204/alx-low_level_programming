@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- *  * _strcat - fuction conctanate two strings
- *   * @dest: sting destanation
- *    * @src: string to be concatanating
- *     * Descrption: create  fucnction that concatanate two strings
- *      * Return: dest
- *      */
+ * _strcat - fuction conctanate two strings
+ * @dest: sting destanation
+ * @src: string to be concatanating
+ * Descrption: create  fucnction that concatanate two strings
+ * Return: dest
+*/
 
 char *_strcat(char *dest, char *src)
 {

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *  * _strchr - search for specfic character in memory
- *   * @s: memory to search in
- *    * @c: character to search for
- *     * Return: Return s for success and Null for failure.
- *     */
+ * _strchr - search for specfic character in memory
+ * @s: memory to search in
+ * @c: character to search for
+ * Return: Return s for success and Null for failure.
+*/
 
 char *_strchr(char *s, char c)
 {

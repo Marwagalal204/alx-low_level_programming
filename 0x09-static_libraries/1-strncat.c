@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- *  * _strncat - fuction conctanate two strings with n value
- *   * @dest: sting destanation
- *    * @src: string to be concatanating
- *     * @n: length of src
- *      * Descrption: create  fucnction that concatanate two strings
- *       * Return: dest
- *       */
+ * _strncat - fuction conctanate two strings with n value
+ * @dest: sting destanation
+ * @src: string to be concatanating
+ * @n: length of src
+ * Descrption: create  fucnction that concatanate two strings
+ * Return: dest
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {

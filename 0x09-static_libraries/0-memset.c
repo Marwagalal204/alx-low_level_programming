@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- *  * _memset - function fills n bytes of the memory s with b
- *   * @s: pointer to a memory
- *    * @b: value to be replaced with
- *     * @n: how long it will replace
- *      * Return: return s after replacement
- *      */
+ * _memset - function fills n bytes of the memory s with b
+ * @s: pointer to a memory
+ * @b: value to be replaced with
+ * @n: how long it will replace
+ * Return: return s after replacement
+*/
 
 char *_memset(char *s, char b, unsigned int n)
 {
