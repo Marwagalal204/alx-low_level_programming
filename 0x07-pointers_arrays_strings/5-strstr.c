@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				f = 1;
 				if (f == 1)
-				return (haystack);
+				return (i);
 			}
 		}
 	}
