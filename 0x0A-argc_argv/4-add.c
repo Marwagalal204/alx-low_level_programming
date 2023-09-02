@@ -12,9 +12,23 @@
 
 int main(int argc, char *argv[])
 {
+	int sum = 0, i, j;
+
 	if (argc < 3)
 		printf("0\n");
 	return (0);
-	printf("%d\n", atoi(argv[1]) + atoi(argv[2]));
+
+	for (i = 0; i < argc; i++)
+	{
+		for (j = 0; j != '\0'; j++)
+		{
+			if (!(isdigit(argv[i])))
+				printf("Error\n");
+			return (1);
+		}
+	}
+
+	sum = sum + atoi(argv[i]);
+	printf("%d\n", sum);
 	return (0);
 }
