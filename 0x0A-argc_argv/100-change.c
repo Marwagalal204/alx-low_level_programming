@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			cents -= 2;
 		if (cents >= 1)
 			cents -= 1;
-		count++;
+		count += 1;
 	}
 	printf("%d\n", count);
 	return (0);
