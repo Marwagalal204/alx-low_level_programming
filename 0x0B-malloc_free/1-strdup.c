@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	int i, tall = 0;
 	char *copied;
 
-	if (*str == 0)
+	if (str == NULL)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
