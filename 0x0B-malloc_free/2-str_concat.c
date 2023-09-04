@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 	char *strcon;
 
 	if (s1 == NULL)
-		s1 = "";
+	       s1 ="";
 	if (s2 == NULL)
 		s2 = "";
 
@@ -29,7 +29,10 @@ char *str_concat(char *s1, char *s2)
 		strcon[i] = s1[i];
 
 	for (j = 0; s2[j] != '\0'; j++)
-		strcon[i + j] = s2[j];
+	{
+		strcon[i] = s2[j];
+		i++;
+	}
 
 	return (strcon);
 }
