@@ -8,11 +8,13 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, n, f;
+	int i, j;
 	char *strcon;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	for (i = 0; s1[i] != '\0'; i++)
 	for (j = 0; s2[j] != '\0'; j++)
@@ -22,12 +24,11 @@ char *str_concat(char *s1, char *s2)
 	if (strcon == NULL)
 		return (NULL);
 
-	for (n = 0; n < i; n++)
-		strcon[n] = s1[n];
+	for (i = 0; s1[i] != '\0'; i++)
+		strcon[i] = s1[i];
 
-	f = j;
-	for (j = 0; j <= f; j++, n++)
-		strcon[n] = s2[j];
+	for (j = 0; s2[j] != '\0'; j++)
+		strcon[i + j] = s2[j];
 
 	return (strcon);
 }
