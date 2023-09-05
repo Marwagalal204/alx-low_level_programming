@@ -4,42 +4,32 @@
 #include <stdio.h>
 
 /**
- * argstost - function concatenates all the inputed arguments.
+ * argstostr - function concatenates all the inputed arguments.
  * @ac: argument count
  * @av: inputed string
  * Return: NULL for filure and result for success
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 char *argstostr(int ac, char **av)
 {
-	int i, total_length = 0;
-	char *result;
+	int i, len = 0;
+	char *res;
 
 	if (ac == 0 || av == NULL)
-	{
-		return NULL;
-	}
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
+		len += strlen(av[i]) + 1;
+
+	res = (char *)malloc(len + 1);
+
+	if (res == NULL)
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		total_length += strlen(av[i]) + 1;
+		strcat(res, av[i]);
+		strcat(res, "\n");
 	}
-
-	result = (char *)malloc(total_length + 1);
-	
-	if (result == NULL)
-		return NULL;
-
-	result[0] = '\0';
-
-	 for (i = 0; i < ac; i++)
-	 {
-		 strcat(result, av[i]);
-		 strcat(result, "\n");
-	 }
-	 return (result);
+	return (res);
 }
