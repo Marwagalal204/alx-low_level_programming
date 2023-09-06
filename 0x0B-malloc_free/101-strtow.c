@@ -71,9 +71,7 @@ char **strtow(char *str)
 			}
 		}
 		else if (ch == 0)
-		{
 			begin = i;
-		}
 		ch++;
 	}
 	words[n] = NULL;
