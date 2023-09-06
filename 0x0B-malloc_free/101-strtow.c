@@ -36,11 +36,8 @@ int wordlen(char *s)
 
 char **strtow(char *str)
 {
-	int l = 0, w, n, i, ch, last, begin;
+	int w, n, i, ch, last, begin, index = 0;
 	char **words, *wrd;
-
-	while (*(str + l))
-		l++;
 
 	w = wordlen(str);
 
@@ -49,28 +46,35 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-	for (i = 0; i <= l; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' || str[i] == '\0')
+		if (str[i] == ' ')
 		{
 			if (ch)
 			{
 				last = i;
-				wrd = (char *) malloc(sizeof(char) * (ch + 1));
 
-					if (wrd == NULL)
-						return (NULL);
+				wrd = (char *)malloc(sizeof(char) * (ch + 1));
+
+				if (wrd == NULL)
+					return (NULL);
 
 				while (begin < last)
-					*wrd++ = str[begin++];
-				*wrd = '\0';
-				words[n] = wrd - ch;
+				{
+					wrd[index++] = str[begin++];
+				}
+				wrd[index] = '\0';
+
+				words[n] = wrd;
 				n++;
 				ch = 0;
 			}
 		}
 		else if (ch == 0)
+		{
 			begin = i;
+		}
+		ch++;
 	}
 	return (words);
 }
