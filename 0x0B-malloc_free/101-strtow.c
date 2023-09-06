@@ -76,5 +76,6 @@ char **strtow(char *str)
 		}
 		ch++;
 	}
+	words[n] = NULL;
 	return (words);
 }
