@@ -23,6 +23,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (j = 0; s2[j] != '\0' && j <= l; j++)
 		;
+
+	size = 
 	p = malloc(i + j + 1);
 		if (p == NULL)
 			return (NULL);
