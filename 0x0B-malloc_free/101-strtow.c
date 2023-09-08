@@ -15,10 +15,10 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' || str[i] == '\t')
+		if ((str[i] == ' ' || str[i] == '\t') && str[i+1] != ' ' && str[i + 1] != '\t' && str[i + 1] != '\0')
 			word++;
 	}
-	word++;
+	if(str[0] != '\t' && str[0] != ' ' ) word++;
 	if (word == 0)
 		return (NULL);
 
