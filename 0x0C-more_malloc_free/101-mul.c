@@ -12,6 +12,7 @@
 int main(int argc, char **argv)
 {
 	unsigned long mul = 0;
+
 	if (argc < 3)
 	{
 		printf("Error\n");
