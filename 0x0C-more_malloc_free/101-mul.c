@@ -13,10 +13,19 @@ int main(int argc, char **argv)
 {
 	if (argc < 3)
 	{
+		                printf("Error\n");
+				                exit(98);
+						        }
+	if (*argv[1] < 48 && *argv[1] > 57)
+	{
+		                printf("Error\n");
+				                exit(98);
+						        }
+	if (*argv[2] < 48 && *argv[2] > 57)
+	{
 		printf("Error\n");
 		exit(98);
 	}
-	else
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
