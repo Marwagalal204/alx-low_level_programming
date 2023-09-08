@@ -10,7 +10,7 @@
 
 char **strtow(char *str)
 {
-	int i, n, j, word = 0, c = 0, *p;
+	int i, n, j, word = 0, c = 0, len = 0;
 	char **ptr;
 
 	for (i = 0; str[i] != '\0'; i++)
@@ -21,44 +21,26 @@ char **strtow(char *str)
 	if (word == 0)
 		return (NULL);
 
-	p = malloc(word * sizeof(int));
-	if (p == NULL)
-		return (NULL);
-
-	p[c] = 0;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ' || str[i] == '\t')
-		{
-			c++;
-			p[c] = 0;
-		}
-		else
-			p[c]++;
-	}
 	ptr = malloc(word + 1);
 	if (ptr == NULL)
 		return (NULL);
 
 	for (n = 0; n < word + 1; n++)
 	{
-		ptr[n] = malloc(p[n] + 1);
-
+		for (j = len; str[j] != ' ' && str[j] != '\t'; j++)
+			;
+		ptr[n] = malloc(j - len + 1);
 		if (ptr == NULL)
 			return (NULL);
-
-		for (j = 0; j <= p[n] + 1; j++)
+		for (c = len; c  < j; c++)
 		{
-			if (*str == ' ' || *str == '\t')
+			if (str[c] == ' ' || str[c] == '\t')
 			{
-				n++;
 				break;
 			}
 			else
 			{
-				ptr[n][j] = *str;
-				str++;
+				ptr[n][c-len] = str[c];
 			}
 		}
 	}
