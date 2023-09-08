@@ -18,16 +18,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[1] < 48 && *argv[1] > 57)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	if (*argv[2] < 48 && *argv[2] > 57)
-	{
-		printf("Error\n");
-		exit(98);
-	}
 	mul = atol(argv[1]) * atol(argv[2]);
 	printf("%lu\n", mul);
 	return (0);
