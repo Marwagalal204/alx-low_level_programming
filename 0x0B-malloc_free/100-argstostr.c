@@ -12,24 +12,27 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, len = 0;
+	int i, j, sum = 0;
 	char *res;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		len += strlen(av[i]) + 1;
-
-	res = (char *)malloc(len + 1);
-
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			sum++;
+		sum++;
+	}
+	res = malloc((sum + 1));
 	if (res == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		strcat(res, av[i]);
-		strcat(res, "\n");
+	for (j = 0; av[i][j] != '\0'; j++)
+		res[i + j] = av[i][j];
+	res[i + j] = '\n';
 	}
 	return (res);
 }
