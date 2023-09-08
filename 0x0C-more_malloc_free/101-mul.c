@@ -11,21 +11,23 @@
 
 int main(int argc, char **argv)
 {
+	unsigned long mul = 0;
 	if (argc < 3)
 	{
-		                printf("Error\n");
-				                exit(98);
-						        }
+		printf("Error\n");
+		exit(98);
+	}
 	if (*argv[1] < 48 && *argv[1] > 57)
 	{
-		                printf("Error\n");
-				                exit(98);
-						        }
+		printf("Error\n");
+		exit(98);
+	}
 	if (*argv[2] < 48 && *argv[2] > 57)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	mul = atoi(argv[1]) * atoi(argv[2]);
+	printf("%lu\n", mul);
 	return (0);
 }
