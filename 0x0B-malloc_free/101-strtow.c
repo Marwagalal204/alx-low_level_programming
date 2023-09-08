@@ -1,32 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stddef.h>
-
-/**
- * wordlen - function counts string long
- * @s: inputed string
- * Return: ord count.
-*/
-int wordlen(char *s)
-{
-	int i, flag, words = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		{
-			flag = 0;
-		}
-		else if (flag != 0)
-		{
-			words++;
-			flag = 1;
-		}
-	}
-	return (words);
-}
 
 /**
  * strtow - a function that splits a string into words.
@@ -36,44 +10,57 @@ int wordlen(char *s)
 
 char **strtow(char *str)
 {
-	int w, n, i, ch, last, begin, index = 0;
-	char **words, *wrd;
-
-	w = wordlen(str);
-
-	words = (char **) malloc(sizeof(char *) * (w + 1));
-
-	if (words == NULL)
-		return (NULL);
+	int i, n, j, word = 0, c = 0, *p;
+	char **ptr;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '\t')
+			word++;
+	}
+	if (word == 0)
+		return (NULL);
+
+	p = malloc(word * sizeof(int));
+	if (p == NULL)
+		return (NULL);
+
+	p[c] = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ' || str[i] == '\t')
 		{
-			if (ch)
+			c++;
+			p[c] = 0;
+		}
+		else
+			p[c]++;
+	}
+	ptr = malloc(word + 1);
+	if (ptr == NULL)
+		return (NULL);
+
+	for (n = 0; n < word + 1; n++)
+	{
+		ptr[n] = malloc(p[n] + 1);
+
+		if (ptr == NULL)
+			return (NULL);
+
+		for (j = 0; j <= p[n] + 1; j++)
+		{
+			if (*str == ' ' || *str == '\t')
 			{
-				last = i;
-
-				wrd = (char *)malloc(sizeof(char) * (ch + 1));
-
-				if (wrd == NULL)
-					return (NULL);
-
-				while (begin < last)
-				{
-					wrd[index++] = str[begin++];
-				}
-				wrd[index] = '\0';
-
-				words[n] = wrd;
 				n++;
-				ch = 0;
+				break;
+			}
+			else
+			{
+				ptr[n][j] = *str;
+				str++;
 			}
 		}
-		else if (ch == 0)
-			begin = i;
-		ch++;
 	}
-	words[n] = NULL;
-	return (words);
+	return (ptr);
 }
