@@ -1,10 +1,10 @@
 #ifndef DOG_H
-#define DOC_H
+#define DOG_H
 /*
  * dog - a new struct with dog info
  * @name: dog name
  * @age: dog age
- * @oner: dog oner
+ * @owner: dog oner
  */
 
 struct dog
