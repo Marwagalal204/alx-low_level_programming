@@ -10,20 +10,20 @@
 */
 int main(int argc, char *argv[])
 {
-	int (*op)(int, int);
+	int (*ops)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	op = get_op_func(argv[2]);
+	ops = get_op_func(argv[2]);
 
-	if (op != NULL)
+	if (ops != NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", ops(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
