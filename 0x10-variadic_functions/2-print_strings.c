@@ -34,7 +34,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("nill");
 		}
 
-		if (separator != NULL && i < n - 1)
+		if (separator != NULL && i < n)
 			printf("%s", separator);
 	}
 
