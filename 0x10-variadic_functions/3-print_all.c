@@ -4,16 +4,13 @@
  * print_all - a function that prints anything.
  * @format: is a list of types of arguments passed to the function
 */
-
 void print_all(const char * const format, ...)
 {
-
 	unsigned int i = 0;
 	char *s;
 	va_list printa;
 
 	va_start(printa, format);
-
 	while (format[i] != '\0')
 	{
 		switch (format[i])
@@ -33,13 +30,14 @@ void print_all(const char * const format, ...)
 				{
 					printf("(nil)");
 				}
-				
 				printf("%s", s);
 				break;
 			default:
 				break;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' &&
+		(format[i + 1] == 'c' ||  format[i + 1] == 'i' ||
+		 format[i + 1] == 'f' || format[i + 1] == 's'))
 			printf(",");
 		i++;
 	}
