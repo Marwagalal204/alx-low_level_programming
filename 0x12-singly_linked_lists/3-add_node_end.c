@@ -13,7 +13,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	size_t len = 0;
 
 	if (str == NULL)
-		return(NULL);
+		return (NULL);
 
 	while (str[len] != '\0')
 	len++;
