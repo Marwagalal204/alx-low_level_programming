@@ -9,6 +9,9 @@ size_t listint_len(const listint_t *h)
 	listint_t *tmp;
 	int count = 0;
 
+	if (h == NULL)
+		return (0);
+
 	tmp = (listint_t *)h;
 
 	while (tmp != NULL)
