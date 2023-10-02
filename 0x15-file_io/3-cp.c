@@ -22,25 +22,18 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	w = open(argv[2], O_CREAT, O_WRONLY, O_TRUNC, 0664);
-	if (w == -1)
-	{
-		fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
-		close(r);
-		exit(99);
-	}
 	rd = read(r, buf, BUFSIZ);
 	{
-		printf("Error: Can't read from file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	while ((rd = read(r, buf, BUFSIZ)) > 0)
+	wr = write(w, buf, rd);
+	while (rd > 0)
 	{
-		wr = write(w, buf, rd);
-	       	if (wr != rd)
+	       	if (wr == -1 || wr != rd)
 		{
 			fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
 			close(r);
-			close(w);
 			exit(99);
 		}
 	}
