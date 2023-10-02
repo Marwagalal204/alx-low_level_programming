@@ -7,8 +7,9 @@
 */
 int main(int argc, char *argv[])
 {
-	int r, w, rd, close_r, close_w;
+	int r, w, close_r, close_w;
 	char buf[1024];
+	ssize_t rd;
 
 	if (argc != 3)
 	{
@@ -28,6 +29,7 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			close(r);
+			close(w);
 			exit(99);
 		}
 	}
