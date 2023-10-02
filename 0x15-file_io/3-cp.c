@@ -12,38 +12,45 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		fprintf(stderr, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	r = open(argv[1], O_RDONLY);
 	if (r == -1)
 	{
-		printf("Error: Can't read from file%s\n", argv[1]);
+		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	w = open(argv[2], O_CREAT, O_WRONLY, O_TRUNC, 0664);
+	if (w == -1)
+	{
+		fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
+		close(r);
+		exit(99);
+	}
 	rd = read(r, buf, BUFSIZ);
 	{
 		printf("Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	wr = write(w, buf, rd);
-	while (rd > 0)
+	while ((rd = read(r, buf, BUFSIZ)) > 0)
 	{
-		if (w == -1 || wr != rd)
+		wr = write(w, buf, rd);
+	       	if (wr != rd)
 		{
-			printf("Error: Can't write to %s\n", argv[2]);
+			fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
 			close(r);
+			close(w);
 			exit(99);
 		}
 	}
 	close_r = close(r);
 	if (close_r == -1)
-		printf("Error: Can't close fd %d\n", r);
+		fprintf(stderr, "Error: Can't close fd %d\n", r);
 	exit(100);
 	close_w = close(w);
 	if (close_w == -1)
-		printf("Error: Can't close fd %d\n", w);
+		fprintf(stderr, "Error: Can't close fd %d\n", w);
 	exit(100);
 	return (0);
 }
