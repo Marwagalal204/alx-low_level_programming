@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * read_textfile - function reads text file and prints it
+ * @filename: name of the file
+ * @letters: inpit letter
+ * Return: actual number of letters
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
