@@ -23,11 +23,6 @@ int main(int argc, char **argv)
 	}
 	w = open(argv[2], O_CREAT, O_WRONLY, O_TRUNC, 0664);
 	rd = read(r, buf, BUFSIZ);
-	if (rd < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	wr = write(w, buf, rd);
 	while (rd > 0)
 	{
@@ -38,6 +33,11 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
+	 if (rd < 0)
+	 {
+		 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		 exit(98);
+	 }
 	close_r = close(r);
 	close_w = close(w);
 	{
