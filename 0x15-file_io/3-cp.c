@@ -22,11 +22,9 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	w = open(argv[2], O_CREAT, O_WRONLY, O_TRUNC, 0664);
-	rd = read(r, buf, BUFSIZ);
-	wr = write(w, buf, rd);
-	while (rd > 0)
+	while ((rd = read(r, buf, BUFSIZ)) > 0)
 	{
-	       	if (w < 0 || wr != rd)
+	       	if (w < 0 || (wr = write(w, buf, rd)) != rd)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			close(r);
