@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 	{
 		if (w == -1 ||  write(w, buf, rd) != rd)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (rd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", argv[1]);
 		exit(98);
 	}
 	close_r = close(r);
