@@ -9,23 +9,20 @@
 
 char *_strdup(char *str)
 {
-	int i, tall = 0;
-	char *copied;
+	int i = 0;
+	char *new_string;
 
-	if (str == NULL)
+	while (str[i] != '\0')
+		i++;
+	new_string = malloc((i + 1) * sizeof(char));
+	if (new_string == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0'; i++)
-		tall++;
-
-	copied = malloc(tall + 1 * sizeof(char));
-
-	if (copied == NULL)
-		return (NULL);
-
-	for (i = 0; str[i] != '\0'; i++)
-
-	copied[i] = str[i];
-
-	return (copied);
+	while (str[i] != '\0')
+	{
+		new_string[i] = str[i];
+		i++;
+	}
+	free(new_string);
+	return (new_string);
 }
