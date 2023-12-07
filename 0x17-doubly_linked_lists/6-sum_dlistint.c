@@ -16,8 +16,15 @@ temp = head;
 
 while (temp != NULL)
 {
+while (temp->prev != NULL)
+{
+temp = temp->prev;
+}
+while (temp != NULL)
+{
 sum += temp->n;
 temp = temp->next;
+}
 }
 return (sum);
 }
