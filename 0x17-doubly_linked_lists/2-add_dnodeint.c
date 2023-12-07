@@ -13,7 +13,6 @@ dlistint_t *new = NULL;
 new = malloc(sizeof(dlistint_t));
 if (new == NULL)
 return (NULL);
-
 (new)->n = n;
 new->next = NULL;
 new->prev = NULL;
