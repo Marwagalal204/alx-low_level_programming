@@ -7,23 +7,23 @@
 */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-unsigned int i = 0;
-dlistint_t *temp;
+	unsigned int i;
 
-if (head == NULL)
-return (NULL);
-temp = head;
-while (temp->next != NULL)
-{
-temp = temp->next;
-i++;
-if (i == index)
-{
-break;
-}}
-if (index > i)
-{
-printf("inavlid index");
-}
-return (temp);
+	if (head == NULL)
+		return (NULL);
+
+	while (head->prev != NULL)
+		head = head->prev;
+
+	i = 0;
+
+	while (head != NULL)
+	{
+		if (i == index)
+			break;
+		head = head->next;
+		i++;
+	}
+
+	return (head);
 }
