@@ -14,7 +14,7 @@ return (0);
 temp = h;
 while (temp != NULL)
 {
-printf("%ld\n", temp->n);
+printf("%d\n", temp->n);
 i++;
 temp = temp->next;
 }
